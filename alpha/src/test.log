@@ -1,0 +1,652 @@
+Command line: [exonerate ALL_LTR.fa Repbase.EC.all.clean.fasta --percent 70]
+Hostname: [jhughes.vet.gla.ac.uk]
+
+C4 Alignment:
+------------
+         Query: chrX_74375495_743758_3348_15743_5ltr
+        Target: ERE1 SINE2/tRNA	Equus caballus:[revcomp]
+         Model: ungapped:dna2dna
+     Raw score: 967
+   Query range: 0 -> 224
+  Target range: 224 -> 0
+
+   1 : tctttttccaaacattttattttttcctttttctccccaaagccccctggtacatagctgtata :  64
+       | |||||  ||| |||||||||||||||||||||||||||||||||| ||||||||| ||| ||
+ 224 : tttttttttaaagattttattttttcctttttctccccaaagccccccggtacatagttgtgta : 161
+
+  65 : ttcttcattgtgggtccttctagttgtggcatgtgggatgctgcctctgcgtggtctgatgagc : 128
+       |||||| |||||||| |||||||||||||||||||||| |||||||| ||||||||||||||||
+ 160 : ttcttcgttgtgggttcttctagttgtggcatgtgggacgctgcctcagcgtggtctgatgagc :  97
+
+ 129 : agtgccatgtccacgcccaggattcgaaccaacggaacactgggccacctgcaacggagagcgc : 192
+       |||||||||||| ||||||||||||||||||||| ||||||||||| |||||| ||||| ||||
+  96 : agtgccatgtccgcgcccaggattcgaaccaacgaaacactgggccgcctgcagcggagcgcgc :  33
+
+ 193 : gaacttaaccactcggccatggggccagcccc : 224
+       ||||||||||||||||||| ||||||||||||
+  32 : gaacttaaccactcggccacggggccagcccc :   1
+
+vulgar: chrX_74375495_743758_3348_15743_5ltr 0 224 + ERE1 224 0 - 967 M 224 224
+
+C4 Alignment:
+------------
+         Query: chrX_74294941_742953_8713_18662_5ltr
+        Target: ERE1 SINE2/tRNA	Equus caballus
+         Model: ungapped:dna2dna
+     Raw score: 1017
+   Query range: 11 -> 236
+  Target range: 0 -> 225
+
+  12 : ggggctggccccgtggccgagcggttaagttcgcgggctccgctgcaggcagcccagtgtttcg :  75
+       ||||||||||||||||||||| ||||||||||||| |||||||||||||| |||||||||||||
+   1 : ggggctggccccgtggccgagtggttaagttcgcgcgctccgctgcaggcggcccagtgtttcg :  64
+
+  76 : ttggttcgagtcctgggcgcggacatggcactgctcatcaaaccacgctggggcagcgtcccac : 139
+       ||||||||| |||||||||||||||||||||||||||||| ||||||||| |||||||||||||
+  65 : ttggttcgaatcctgggcgcggacatggcactgctcatcagaccacgctgaggcagcgtcccac : 128
+
+ 140 : atgccacagctagaaggacacacagcgaagaatatacaactatgtaccagggggctttggggag : 203
+       |||||||| ||||||| || |||| ||||||||| ||||||||||||| |||||||||||||||
+ 129 : atgccacaactagaagaacccacaacgaagaatacacaactatgtaccggggggctttggggag : 192
+
+ 204 : aaaaaggaaaaaataaaatctttaaaaaaaaaa : 236
+       |||||||||||||||||||||||||||||||||
+ 193 : aaaaaggaaaaaataaaatctttaaaaaaaaaa : 225
+
+vulgar: chrX_74294941_742953_8713_18662_5ltr 11 236 + ERE1 0 225 + 1017 M 225 225
+
+C4 Alignment:
+------------
+         Query: chrX_74294941_742953_8713_18662_3ltr
+        Target: ERE1 SINE2/tRNA	Equus caballus
+         Model: ungapped:dna2dna
+     Raw score: 1062
+   Query range: 0 -> 225
+  Target range: 0 -> 225
+
+   1 : ggggctggccccgtggccgagtggttaagttcgcgcgctccgctgcaggcggcccagtgtttcg :  64
+       ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+   1 : ggggctggccccgtggccgagtggttaagttcgcgcgctccgctgcaggcggcccagtgtttcg :  64
+
+  65 : ttggttcgaatcctgggcgcggacatggcactgctcatcagaccacgctggggcggcgtcccac : 128
+       |||||||||||||||||||||||||||||||||||||||||||||||||| ||| |||||||||
+  65 : ttggttcgaatcctgggcgcggacatggcactgctcatcagaccacgctgaggcagcgtcccac : 128
+
+ 129 : ataccacaactggaagaacccacaacgaagaatatacaactatgtaccggggggctttggggag : 192
+       || |||||||| |||||||||||||||||||||| |||||||||||||||||||||||||||||
+ 129 : atgccacaactagaagaacccacaacgaagaatacacaactatgtaccggggggctttggggag : 192
+
+ 193 : aaaaaggaaataataaaatcttaaaaaaaaaaa : 225
+       |||||||||| ||||||||||| ||||||||||
+ 193 : aaaaaggaaaaaataaaatctttaaaaaaaaaa : 225
+
+vulgar: chrX_74294941_742953_8713_18662_3ltr 0 225 + ERE1 0 225 + 1062 M 225 225
+
+C4 Alignment:
+------------
+         Query: chr12_23410752_23411_5751_15419_3ltr
+        Target: ERE1 SINE2/tRNA	Equus caballus:[revcomp]
+         Model: ungapped:dna2dna
+     Raw score: 981
+   Query range: 1 -> 226
+  Target range: 225 -> 0
+
+   2 : tttttttttaaagattttatttttttcctttttctccccaaagccccccagtacatagttgtgt :  65
+       ||||||||| ||   |||  ||||||||||||||||||||||||||||| ||||||||||||||
+ 225 : ttttttttttaaagattttattttttcctttttctccccaaagccccccggtacatagttgtgt : 162
+
+  66 : atttttagttgtggatccttctagttgtggcatgtgggacgctgcctcagcgtggtttgatgag : 129
+       ||| || ||||||| | ||||||||||||||||||||||||||||||||||||||| |||||||
+ 161 : attcttcgttgtgggttcttctagttgtggcatgtgggacgctgcctcagcgtggtctgatgag :  98
+
+ 130 : cagtgccatgtccgtgcccaggattcgaaccaacgaaacactgggccgcctgcagcggagcacg : 193
+       |||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||| ||
+  97 : cagtgccatgtccgcgcccaggattcgaaccaacgaaacactgggccgcctgcagcggagcgcg :  34
+
+ 194 : agaacttaaccacttggccacggggccagcccc : 226
+        ||||||||||||| ||||||||||||||||||
+  33 : cgaacttaaccactcggccacggggccagcccc :   1
+
+vulgar: chr12_23410752_23411_5751_15419_3ltr 1 226 + ERE1 225 0 - 981 M 225 225
+
+C4 Alignment:
+------------
+         Query: chrX_74375495_743758_3348_15743_3ltr
+        Target: ERE1 SINE2/tRNA	Equus caballus:[revcomp]
+         Model: ungapped:dna2dna
+     Raw score: 967
+   Query range: 2 -> 226
+  Target range: 225 -> 1
+
+   3 : ttttgtttttaaagattttattcttttcctttttctccccaaagcccccggtacatagttgtat :  66
+       |||| ||||||||||||||||| ||| | ||||   ||| ||  |||||||||||||||||| |
+ 225 : ttttttttttaaagattttattttttcctttttctccccaaagccccccggtacatagttgtgt : 162
+
+  67 : attcttcgttgtgggtccttctagttgtggcatgtgggacgctgcctcagcgtggtttgatgag : 130
+       |||||||||||||||| ||||||||||||||||||||||||||||||||||||||| |||||||
+ 161 : attcttcgttgtgggttcttctagttgtggcatgtgggacgctgcctcagcgtggtctgatgag :  98
+
+ 131 : cagtgccatgtccgcgcccaggattcaaaccaacgaaacactgggccgcctgcagtggagcaca : 194
+       |||||||||||||||||||||||||| |||||||||||||||||||||||||||| ||||| | 
+  97 : cagtgccatgtccgcgcccaggattcgaaccaacgaaacactgggccgcctgcagcggagcgcg :  34
+
+ 195 : cgaacttaaccactcggccacggggccagccc : 226
+       ||||||||||||||||||||||||||||||||
+  33 : cgaacttaaccactcggccacggggccagccc :   2
+
+vulgar: chrX_74375495_743758_3348_15743_3ltr 2 226 + ERE1 225 1 - 967 M 224 224
+
+C4 Alignment:
+------------
+         Query: chr10_20943735_20944_9438_19475_5ltr
+        Target: ERE2 SINE2/tRNA	Equus
+         Model: ungapped:dna2dna
+     Raw score: 902
+   Query range: 0 -> 202
+  Target range: 45 -> 247
+
+   1 : tcagtggccccagggttcaccagttcggatcctgggtgcagacatggcaccgcttggcaaaagc :  64
+       || | |||||  ||||||||| |||||||||| |||||| ||||||||||||||||||||||||
+  46 : tcggcggcccgggggttcaccggttcggatcccgggtgcggacatggcaccgcttggcaaaagc : 109
+
+  65 : catgctgtggtaggcaccccacatataaagtagaggaagatgggcacggatgttagctcagggc : 128
+       |||||||||||||||  |||||||||||||||||||||||||||||||||||||||||||||||
+ 110 : catgctgtggtaggcgtcccacatataaagtagaggaagatgggcacggatgttagctcagggc : 173
+
+ 129 : cagccttcctcagcaaaaagaggaggattggcagtagttagctcagggctaatctttctcaaaa : 192
+       ||| |||||||||||||||||||||||||||||| ||||||||||||||||||||| |||||||
+ 174 : cagtcttcctcagcaaaaagaggaggattggcagcagttagctcagggctaatcttcctcaaaa : 237
+
+ 193 : aaaaaaaaaa : 202
+       ||||||||||
+ 238 : aaaaaaaaaa : 247
+
+vulgar: chr10_20943735_20944_9438_19475_5ltr 0 202 + ERE2 45 247 + 902 M 202 202
+
+C4 Alignment:
+------------
+         Query: chr22_25082982_25083_6788_13907_3ltr
+        Target: L1-1_EC L1	Equus caballus
+         Model: ungapped:dna2dna
+     Raw score: 2004
+   Query range: 0 -> 471
+  Target range: 5891 -> 6362
+
+    1 : atttctccaaagaagatataaggatggccaatagacacatgaaaagatgctcatcatcacta :   62
+        ||||||| ||||||||||| |  |||||||||||||||||||||||||| |||||||| |||
+ 5892 : atttctcaaaagaagatatgaatatggccaatagacacatgaaaagatgttcatcatcgcta : 5953
+
+   63 : attatcagggaaatgcaaatcaaaactacactaagatatcaccttacacctgttagaatggc :  124
+        || |||||||||||||||||||||||||||||||||||||||||||| || |||||| ||||
+ 5954 : atcatcagggaaatgcaaatcaaaactacactaagatatcaccttacccccgttagattggc : 6015
+
+  125 : aaaaatatccaaaaccaagagtgacaaatgttggagaggttgtggagaaaaaggaaccctca :  186
+        ||||| ||||||||||||||  |||||||||||||||||||||||||||| |||||||||||
+ 6016 : aaaaacatccaaaaccaagaacgacaaatgttggagaggttgtggagaaagaggaaccctca : 6077
+
+  187 : tgcactgttggtgggaatgcaaactggtgcagccactatggaaaacagtatggagatttctc :  248
+        | |||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||
+ 6078 : tacactgttggtgggaatgcaaactggtacagccactatggaaaacagtatggagatttctc : 6139
+
+  249 : aaaaagttaaaaatagaaataccttatgacctagccatcccactactcggtatctatcctaa :  310
+        ||||||||||||||||||||||| ||||||| |||||||||| |||| ||||||||||||||
+ 6140 : aaaaagttaaaaatagaaataccctatgacccagccatcccattactgggtatctatcctaa : 6201
+
+  311 : gaacctgaagtcagcaattccaagagtcccacgcacccctatgttcattgcagcattatgta :  372
+        ||||||||  ||||  ||  |||||||||   |||||||||||||||| |||||||||| ||
+ 6202 : gaacctgatatcagatatctcaagagtccgttgcacccctatgttcatcgcagcattattta : 6263
+
+  373 : caatagccgagacatggaaccaacctaagtgcccagcaactgatgattggataaagaagata :  434
+        |||||||| |||| |||||||| ||||  ||||||| |||||||||||||||||||||||| 
+ 6264 : caatagccaagacgtggaaccagcctacatgcccagaaactgatgattggataaagaagatg : 6325
+
+  435 : tggtatatatatacaatggaatactactcagccataa :  471
+        ||||||||||| |||||||||||||||||||||||||
+ 6326 : tggtatatatacacaatggaatactactcagccataa : 6362
+
+vulgar: chr22_25082982_25083_6788_13907_3ltr 0 471 + L1-1_EC 5891 6362 + 2004 M 471 471
+
+C4 Alignment:
+------------
+         Query: chr7_79083048_790833_5343_19414_5ltr
+        Target: L1-1_EC L1	Equus caballus
+         Model: ungapped:dna2dna
+     Raw score: 1393
+   Query range: 0 -> 284
+  Target range: 6036 -> 6320
+
+    1 : cgacaaatgttggaggggttgtggagaaagaggaaccctcatacactgttggtgggaatgca :   62
+        ||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||
+ 6037 : cgacaaatgttggagaggttgtggagaaagaggaaccctcatacactgttggtgggaatgca : 6098
+
+   63 : aactggtacaaccactatggaaaacagtatggagatttctcaaaaagttaaaaatagaaata :  124
+        |||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||
+ 6099 : aactggtacagccactatggaaaacagtatggagatttctcaaaaagttaaaaatagaaata : 6160
+
+  125 : ccctatgacccagccatcccattactgggtatctatcctaagaacctgatatcagaaatctc :  186
+        |||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||
+ 6161 : ccctatgacccagccatcccattactgggtatctatcctaagaacctgatatcagatatctc : 6222
+
+  187 : aagagtccgttgcacccctatgttcatcgcagcattatttacaatagccaagacgtggaacc :  248
+        ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+ 6223 : aagagtccgttgcacccctatgttcatcgcagcattatttacaatagccaagacgtggaacc : 6284
+
+  249 : agcctacatgcccagaaactgatgattggataaaga :  284
+        ||||||||||||||||||||||||||||||||||||
+ 6285 : agcctacatgcccagaaactgatgattggataaaga : 6320
+
+vulgar: chr7_79083048_790833_5343_19414_5ltr 0 284 + L1-1_EC 6036 6320 + 1393 M 284 284
+
+C4 Alignment:
+------------
+         Query: chr22_25082982_25083_6788_13907_3ltr
+        Target: L1-2B_EC L1	Equus caballus
+         Model: ungapped:dna2dna
+     Raw score: 2002
+   Query range: 0 -> 449
+  Target range: 5200 -> 5649
+
+    1 : atttctccaaagaagatataaggatggccaatagacacatgaaaagatgctcatcatcacta :   62
+        |||||||||||||||||||| ||||||||||||| |||||||||||||| ||||||||||| 
+ 5201 : atttctccaaagaagatatacggatggccaataggcacatgaaaagatgttcatcatcactg : 5262
+
+   63 : attatcagggaaatgcaaatcaaaactacactaagatatcaccttacacctgttagaatggc :  124
+        || ||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||
+ 5263 : atcatcagggaaatgcaaatcaaaactacactaagatatcaccttacacccgttagaatggc : 5324
+
+  125 : aaaaatatccaaaaccaagagtgacaaatgttggagaggttgtggagaaaaaggaaccctca :  186
+        ||||||| ||||||| || ||| |||||||||||||||||||||||||||||||||||||||
+ 5325 : aaaaataaccaaaacaaaaagtaacaaatgttggagaggttgtggagaaaaaggaaccctca : 5386
+
+  187 : tgcactgttggtgggaatgcaaactggtgcagccactatggaaaacagtatggagatttctc :  248
+        | ||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||
+ 5387 : tacactgctggtgggaatgcaaactggtgcagccactatggaaaacagtatggagatttctc : 5448
+
+  249 : aaaaagttaaaaatagaaataccttatgacctagccatcccactactcggtatctatcctaa :  310
+        ||||| ||||||||||||||||| ||||||| ||||||||||||||| ||||||||||| ||
+ 5449 : aaaaaattaaaaatagaaataccatatgacccagccatcccactactgggtatctatccaaa : 5510
+
+  311 : gaacctgaagtcagcaattccaagagtcccacgcacccctatgttcattgcagcattatgta :  372
+        |||| |||| ||||||||||||| ||||||| ||||||||||||||||||||||||||| ||
+ 5511 : gaacttgaaatcagcaattccaaaagtcccatgcacccctatgttcattgcagcattattta : 5572
+
+  373 : caatagccgagacatggaaccaacctaagtgcccagcaactgatgattggataaagaagata :  434
+        |||||||| |||| ||||| ||||||||||||||| ||||||||||||||||||||||||||
+ 5573 : caatagccaagacgtggaagcaacctaagtgcccatcaactgatgattggataaagaagata : 5634
+
+  435 : tggtatatatataca :  449
+        ||||||||||||| |
+ 5635 : tggtatatatatata : 5649
+
+vulgar: chr22_25082982_25083_6788_13907_3ltr 0 449 + L1-2B_EC 5200 5649 + 2002 M 449 449
+
+C4 Alignment:
+------------
+         Query: chr7_79083048_790833_5343_19414_5ltr
+        Target: L1-2B_EC L1	Equus caballus
+         Model: ungapped:dna2dna
+     Raw score: 1194
+   Query range: 2 -> 284
+  Target range: 5347 -> 5629
+
+    3 : acaaatgttggaggggttgtggagaaagaggaaccctcatacactgttggtgggaatgcaaa :   64
+        ||||||||||||| ||||||||||||| |||||||||||||||||| |||||||||||||||
+ 5348 : acaaatgttggagaggttgtggagaaaaaggaaccctcatacactgctggtgggaatgcaaa : 5409
+
+   65 : ctggtacaaccactatggaaaacagtatggagatttctcaaaaagttaaaaatagaaatacc :  126
+        ||||| || ||||||||||||||||||||||||||||||||||| |||||||||||||||||
+ 5410 : ctggtgcagccactatggaaaacagtatggagatttctcaaaaaattaaaaatagaaatacc : 5471
+
+  127 : ctatgacccagccatcccattactgggtatctatcctaagaacctgatatcagaaatctcaa :  188
+         |||||||||||||||||| |||||||||||||||| |||||| ||| ||||| |||  |||
+ 5472 : atatgacccagccatcccactactgggtatctatccaaagaacttgaaatcagcaattccaa : 5533
+
+  189 : gagtccgttgcacccctatgttcatcgcagcattatttacaatagccaagacgtggaaccag :  250
+         |||||  ||||||||||||||||| |||||||||||||||||||||||||||||||| || 
+ 5534 : aagtcccatgcacccctatgttcattgcagcattatttacaatagccaagacgtggaagcaa : 5595
+
+  251 : cctacatgcccagaaactgatgattggataaaga :  284
+        ||||  ||||||  ||||||||||||||||||||
+ 5596 : cctaagtgcccatcaactgatgattggataaaga : 5629
+
+vulgar: chr7_79083048_790833_5343_19414_5ltr 2 284 + L1-2B_EC 5347 5629 + 1194 M 282 282
+
+C4 Alignment:
+------------
+         Query: chr22_25082982_25083_6788_13907_3ltr
+        Target: L1-2_EC L1	Equus caballus
+         Model: ungapped:dna2dna
+     Raw score: 1907
+   Query range: 0 -> 466
+  Target range: 5166 -> 5632
+
+    1 : atttctccaaagaagatataaggatggccaatagacacatgaaaagatgctcatcatcacta :   62
+        ||||||||||||||||||||  |||||||||||| ||||||||||||||||||||||| || 
+ 5167 : atttctccaaagaagatatactgatggccaataggcacatgaaaagatgctcatcatcgctg : 5228
+
+   63 : attatcagggaaatgcaaatcaaaactacactaagatatcaccttacacctgttagaatggc :  124
+        || ||||||||||||||||||||||||||||||||||||||||||||||| ||||||||| |
+ 5229 : atcatcagggaaatgcaaatcaaaactacactaagatatcaccttacacccgttagaatgac : 5290
+
+  125 : aaaaatatccaaaaccaagagtgacaaatgttggagaggttgtggagaaaaaggaaccctca :  186
+        ||||||||| ||||| || ||  ||||||||||||||||||| |||||||||||||||||||
+ 5291 : aaaaatatctaaaactaatagcaacaaatgttggagaggttgcggagaaaaaggaaccctca : 5352
+
+  187 : tgcactgttggtgggaatgcaaactggtgcagccactatggaaaacagtatggagatttctc :  248
+        | ||||| |||||||||||||||||||||||||||||||||||||||||||||||||| |||
+ 5353 : tacactgctggtgggaatgcaaactggtgcagccactatggaaaacagtatggagattcctc : 5414
+
+  249 : aaaaagttaaaaatagaaataccttatgacctagccatcccactactcggtatctatcctaa :  310
+        |||||  ||||||||||| |||| || || | ||||||||||||||| ||||| ||||| ||
+ 5415 : aaaaaactaaaaatagaactaccatacgatccagccatcccactactgggtatttatccaaa : 5476
+
+  311 : gaacctgaagtcagcaattccaagagtcccacgcacccctatgttcattgcagcattatgta :  372
+        || ||||||||||||||| |||| |||||   ||||||| ||||| ||||||||| | | ||
+ 5477 : gagcctgaagtcagcaatcccaaaagtcctgtgcaccccaatgtttattgcagcactgttta : 5538
+
+  373 : caatagccgagacatggaaccaacctaagtgcccagcaactgatgattggataaagaagata :  434
+        |||||||| |||| ||||| ||||||||||||||| |||| || || |||||||||||||| 
+ 5539 : caatagccaagacgtggaagcaacctaagtgcccatcaacagacgaatggataaagaagatg : 5600
+
+  435 : tggtatatatatacaatggaatactactcagc :  466
+        ||||| ||||||||||||||||||||||||||
+ 5601 : tggtacatatatacaatggaatactactcagc : 5632
+
+vulgar: chr22_25082982_25083_6788_13907_3ltr 0 466 + L1-2_EC 5166 5632 + 1907 M 466 466
+
+C4 Alignment:
+------------
+         Query: chr7_79083048_790833_5343_19414_5ltr
+        Target: L1-2_EC L1	Equus caballus
+         Model: ungapped:dna2dna
+     Raw score: 1069
+   Query range: 0 -> 284
+  Target range: 5311 -> 5595
+
+    1 : cgacaaatgttggaggggttgtggagaaagaggaaccctcatacactgttggtgggaatgca :   62
+        | ||||||||||||| ||||| ||||||| |||||||||||||||||| |||||||||||||
+ 5312 : caacaaatgttggagaggttgcggagaaaaaggaaccctcatacactgctggtgggaatgca : 5373
+
+   63 : aactggtacaaccactatggaaaacagtatggagatttctcaaaaagttaaaaatagaaata :  124
+        ||||||| || |||||||||||||||||||||||||| ||||||||  ||||||||||| ||
+ 5374 : aactggtgcagccactatggaaaacagtatggagattcctcaaaaaactaaaaatagaacta : 5435
+
+  125 : ccctatgacccagccatcccattactgggtatctatcctaagaacctgatatcagaaatctc :  186
+        || || || |||||||||||| |||||||||| ||||| |||| |||||  |||| |||| |
+ 5436 : ccatacgatccagccatcccactactgggtatttatccaaagagcctgaagtcagcaatccc : 5497
+
+  187 : aagagtccgttgcacccctatgttcatcgcagcattatttacaatagccaagacgtggaacc :  248
+        || |||||  |||||||| ||||| || |||||| | ||||||||||||||||||||||| |
+ 5498 : aaaagtcctgtgcaccccaatgtttattgcagcactgtttacaatagccaagacgtggaagc : 5559
+
+  249 : agcctacatgcccagaaactgatgattggataaaga :  284
+        | ||||  ||||||  ||| || || ||||||||||
+ 5560 : aacctaagtgcccatcaacagacgaatggataaaga : 5595
+
+vulgar: chr7_79083048_790833_5343_19414_5ltr 0 284 + L1-2_EC 5311 5595 + 1069 M 284 284
+
+C4 Alignment:
+------------
+         Query: chr22_25082982_25083_6788_13907_3ltr
+        Target: L1-3_EC L1	Equus caballus
+         Model: ungapped:dna2dna
+     Raw score: 2184
+   Query range: 0 -> 471
+  Target range: 5940 -> 6411
+
+    1 : atttctccaaagaagatataaggatggccaatagacacatgaaaagatgctcatcatcacta :   62
+        |||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||
+ 5941 : atttctccaaagaagatatacggatggccaatagacacatgaaaagatgctcatcatcacta : 6002
+
+   63 : attatcagggaaatgcaaatcaaaactacactaagatatcaccttacacctgttagaatggc :  124
+        || |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+ 6003 : atcatcagggaaatgcaaatcaaaactacactaagatatcaccttacacctgttagaatggc : 6064
+
+  125 : aaaaatatccaaaaccaagagtgacaaatgttggagaggttgtggagaaaaaggaaccctca :  186
+        ||||||||||||||||||||||||||||||||||||||| ||||||||||| ||||||||||
+ 6065 : aaaaatatccaaaaccaagagtgacaaatgttggagaggctgtggagaaaagggaaccctca : 6126
+
+  187 : tgcactgttggtgggaatgcaaactggtgcagccactatggaaaacagtatggagatttctc :  248
+        | |||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||
+ 6127 : tacactgttggtgggaatgcaaactggtgcagccactatggaaaacagtatggagattcctc : 6188
+
+  249 : aaaaagttaaaaatagaaataccttatgacctagccatcccactactcggtatctatcctaa :  310
+        |||||||||| |||||||||||||||||||| ||||||||||||||| ||||||||||||||
+ 6189 : aaaaagttaagaatagaaataccttatgacccagccatcccactactgggtatctatcctaa : 6250
+
+  311 : gaacctgaagtcagcaattccaagagtcccacgcacccctatgttcattgcagcattatgta :  372
+        ||||||||| ||||||||||||| ||| ||| |||||||||||||||| ||||||||||  |
+ 6251 : gaacctgaaatcagcaattccaaaagttccatgcacccctatgttcatcgcagcattattca : 6312
+
+  373 : caatagccgagacatggaaccaacctaagtgcccagcaactgatgattggataaagaagata :  434
+        |||||||| || ||||||||||||||||||||||||||||||||||||||||||||||||| 
+ 6313 : caatagccaagtcatggaaccaacctaagtgcccagcaactgatgattggataaagaagatg : 6374
+
+  435 : tggtatatatatacaatggaatactactcagccataa :  471
+        |||||||||||||||||||||||||||||||||||||
+ 6375 : tggtatatatatacaatggaatactactcagccataa : 6411
+
+vulgar: chr22_25082982_25083_6788_13907_3ltr 0 471 + L1-3_EC 5940 6411 + 2184 M 471 471
+
+C4 Alignment:
+------------
+         Query: chr7_79083048_790833_5343_19414_5ltr
+        Target: L1-3_EC L1	Equus caballus
+         Model: ungapped:dna2dna
+     Raw score: 1190
+   Query range: 1 -> 284
+  Target range: 6086 -> 6369
+
+    2 : gacaaatgttggaggggttgtggagaaagaggaaccctcatacactgttggtgggaatgcaa :   63
+        |||||||||||||| || ||||||||||  ||||||||||||||||||||||||||||||||
+ 6087 : gacaaatgttggagaggctgtggagaaaagggaaccctcatacactgttggtgggaatgcaa : 6148
+
+   64 : actggtacaaccactatggaaaacagtatggagatttctcaaaaagttaaaaatagaaatac :  125
+        |||||| || |||||||||||||||||||||||||| ||||||||||||| |||||||||||
+ 6149 : actggtgcagccactatggaaaacagtatggagattcctcaaaaagttaagaatagaaatac : 6210
+
+  126 : cctatgacccagccatcccattactgggtatctatcctaagaacctgatatcagaaatctca :  187
+        | |||||||||||||||||| ||||||||||||||||||||||||||| ||||| |||  ||
+ 6211 : cttatgacccagccatcccactactgggtatctatcctaagaacctgaaatcagcaattcca : 6272
+
+  188 : agagtccgttgcacccctatgttcatcgcagcattatttacaatagccaagacgtggaacca :  249
+        | ||| |  ||||||||||||||||||||||||||||| |||||||||||| | ||||||||
+ 6273 : aaagttccatgcacccctatgttcatcgcagcattattcacaatagccaagtcatggaacca : 6334
+
+  250 : gcctacatgcccagaaactgatgattggataaaga :  284
+         ||||  ||||||| ||||||||||||||||||||
+ 6335 : acctaagtgcccagcaactgatgattggataaaga : 6369
+
+vulgar: chr7_79083048_790833_5343_19414_5ltr 1 284 + L1-3_EC 6086 6369 + 1190 M 283 283
+
+C4 Alignment:
+------------
+         Query: chr22_25082982_25083_6788_13907_3ltr
+        Target: L1-4B_EC L1	Equus caballus
+         Model: ungapped:dna2dna
+     Raw score: 1698
+   Query range: 0 -> 471
+  Target range: 6199 -> 6670
+
+    1 : atttctccaaagaagatataaggatggccaatagacacatgaaaagatgctcatcatcacta :   62
+        ||||||||||||||||||||  ||||||||| || |||||||||||||| ||| ||||||||
+ 6200 : atttctccaaagaagatatacagatggccaacaggcacatgaaaagatgttcaacatcacta : 6261
+
+   63 : attatcagggaaatgcaaatcaaaactacactaagatatcaccttacacctgttagaatggc :  124
+        | |||||||||||||||||||||||||||| | ||||||||||| || || || ||||||||
+ 6262 : actatcagggaaatgcaaatcaaaactacaatgagatatcacctcactcccgtcagaatggc : 6323
+
+  125 : aaaaatatccaaaaccaagagtgacaaatgttggagaggttgtggagaaaaaggaaccctca :  186
+         | |||   ||| ||    | | |||| ||||||||||| |||||||| || ||||||||||
+ 6324 : tataattaacaagacaggaaataacaagtgttggagaggatgtggagagaagggaaccctca : 6385
+
+  187 : tgcactgttggtgggaatgcaaactggtgcagccactatggaaaacagtatggagatttctc :  248
+        | ||||| |||||||| ||||||||||||||||||||||||||||||||||||||||| |||
+ 6386 : tacactgctggtgggagtgcaaactggtgcagccactatggaaaacagtatggagattcctc : 6447
+
+  249 : aaaaagttaaaaatagaaataccttatgacctagccatcccactactcggtatctatcctaa :  310
+        ||||| |||| ||||||| |||| || || | ||| || ||||| || ||||| ||||| ||
+ 6448 : aaaaaattaagaatagaactaccatacgatccagctattccactgctgggtatttatccaaa : 6509
+
+  311 : gaacctgaagtcagcaattccaagagtcccacgcacccctatgttcattgcagcattatgta :  372
+        |||| ||||  ||  ||| |  | ||   || |||||||||||||||| ||||||||||  |
+ 6510 : gaacatgaaaacacgaatgcgtaaagatacatgcacccctatgttcatcgcagcattattca : 6571
+
+  373 : caatagccgagacatggaaccaacctaagtgcccagcaactgatgattggataaagaagata :  434
+        |||||||| |||| ||||| ||||||| ||||||| |||  || || |||||||||||||| 
+ 6572 : caatagccaagacttggaagcaacctaggtgcccatcaagggacgaatggataaagaagatg : 6633
+
+  435 : tggtatatatatacaatggaatactactcagccataa :  471
+        ||||||||||| |||||||||||||||||||||||||
+ 6634 : tggtatatatacacaatggaatactactcagccataa : 6670
+
+vulgar: chr22_25082982_25083_6788_13907_3ltr 0 471 + L1-4B_EC 6199 6670 + 1698 M 471 471
+
+C4 Alignment:
+------------
+         Query: chr22_25082982_25083_6788_13907_3ltr
+        Target: L1-5B_EC L1	Equus caballus
+         Model: ungapped:dna2dna
+     Raw score: 2031
+   Query range: 0 -> 471
+  Target range: 6054 -> 6525
+
+    1 : atttctccaaagaagatataaggatggccaatagacacatgaaaagatgctcatcatcacta :   62
+        ||||||||||||||||||||  |||||||||||| |||||||||||||||||||||||||| 
+ 6055 : atttctccaaagaagatatacagatggccaataggcacatgaaaagatgctcatcatcactg : 6116
+
+   63 : attatcagggaaatgcaaatcaaaactacactaagatatcaccttacacctgttagaatggc :  124
+        || ||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||
+ 6117 : atcatcagggaaatgcaaatcaaaactacactaagatatcaccttacacccgttagaatggc : 6178
+
+  125 : aaaaatatccaaaaccaagagtgacaaatgttggagaggttgtggagaaaaaggaaccctca :  186
+         | |||| |||| || || | | |||||||||||||||||||||||||||||||||||||||
+ 6179 : tataataaccaagacaaaaaataacaaatgttggagaggttgtggagaaaaaggaaccctca : 6240
+
+  187 : tgcactgttggtgggaatgcaaactggtgcagccactatggaaaacagtatggagatttctc :  248
+        | ||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||
+ 6241 : tacactgctggtgggaatgcaaactggtgcagccactatggaaaacagtatggagatttctc : 6302
+
+  249 : aaaaagttaaaaatagaaataccttatgacctagccatcccactactcggtatctatcctaa :  310
+        ||||| ||||||||||||||||| ||||||| ||||||||||||||| ||||||||||| ||
+ 6303 : aaaaaattaaaaatagaaataccatatgacccagccatcccactactgggtatctatccaaa : 6364
+
+  311 : gaacctgaagtcagcaattccaagagtcccacgcacccctatgttcattgcagcattatgta :  372
+        |||| |||| |||||||||| ||||| |  | |||||||||||||||||||||||||||  |
+ 6365 : gaacttgaaatcagcaattcaaagagacttatgcacccctatgttcattgcagcattattca : 6426
+
+  373 : caatagccgagacatggaaccaacctaagtgcccagcaactgatgattggataaagaagata :  434
+        |||||||| |||| ||||| ||||||||||||||| | |||||||| |||||||||||||||
+ 6427 : caatagccaagacgtggaagcaacctaagtgcccatcgactgatgactggataaagaagata : 6488
+
+  435 : tggtatatatatacaatggaatactactcagccataa :  471
+        |||||||||||||||||||||||||||||||||||||
+ 6489 : tggtatatatatacaatggaatactactcagccataa : 6525
+
+vulgar: chr22_25082982_25083_6788_13907_3ltr 0 471 + L1-5B_EC 6054 6525 + 2031 M 471 471
+
+C4 Alignment:
+------------
+         Query: chr7_79083048_790833_5343_19414_5ltr
+        Target: L1-5B_EC L1	Equus caballus
+         Model: ungapped:dna2dna
+     Raw score: 1149
+   Query range: 2 -> 284
+  Target range: 6201 -> 6483
+
+    3 : acaaatgttggaggggttgtggagaaagaggaaccctcatacactgttggtgggaatgcaaa :   64
+        ||||||||||||| ||||||||||||| |||||||||||||||||| |||||||||||||||
+ 6202 : acaaatgttggagaggttgtggagaaaaaggaaccctcatacactgctggtgggaatgcaaa : 6263
+
+   65 : ctggtacaaccactatggaaaacagtatggagatttctcaaaaagttaaaaatagaaatacc :  126
+        ||||| || ||||||||||||||||||||||||||||||||||| |||||||||||||||||
+ 6264 : ctggtgcagccactatggaaaacagtatggagatttctcaaaaaattaaaaatagaaatacc : 6325
+
+  127 : ctatgacccagccatcccattactgggtatctatcctaagaacctgatatcagaaatctcaa :  188
+         |||||||||||||||||| |||||||||||||||| |||||| ||| ||||| |||   ||
+ 6326 : atatgacccagccatcccactactgggtatctatccaaagaacttgaaatcagcaattcaaa : 6387
+
+  189 : gagtccgttgcacccctatgttcatcgcagcattatttacaatagccaagacgtggaaccag :  250
+        ||| |   ||||||||||||||||| ||||||||||| |||||||||||||||||||| || 
+ 6388 : gagacttatgcacccctatgttcattgcagcattattcacaatagccaagacgtggaagcaa : 6449
+
+  251 : cctacatgcccagaaactgatgattggataaaga :  284
+        ||||  ||||||   |||||||| ||||||||||
+ 6450 : cctaagtgcccatcgactgatgactggataaaga : 6483
+
+vulgar: chr7_79083048_790833_5343_19414_5ltr 2 284 + L1-5B_EC 6201 6483 + 1149 M 282 282
+
+C4 Alignment:
+------------
+         Query: chr22_25082982_25083_6788_13907_3ltr
+        Target: L1-5_EC L1	Equus caballus
+         Model: ungapped:dna2dna
+     Raw score: 1955
+   Query range: 0 -> 471
+  Target range: 5372 -> 5843
+
+    1 : atttctccaaagaagatataaggatggccaatagacacatgaaaagatgctcatcatcacta :   62
+        |||| |||||||||||||||  |||||||||||| |||||||||||||| ||| ||||||||
+ 5373 : atttttccaaagaagatatacagatggccaataggcacatgaaaagatgttcaacatcacta : 5434
+
+   63 : attatcagggaaatgcaaatcaaaactacactaagatatcaccttacacctgttagaatggc :  124
+        || ||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||
+ 5435 : atcatcagggaaatgcaaatcaaaactacactaagatatcaccttacacccgttagaatggc : 5496
+
+  125 : aaaaatatccaaaaccaagagtgacaaatgttggagaggttgtggagaaaaaggaaccctca :  186
+         | |||| |:|| || || | | |||||||||||||||| ||||||||||| ||||||||||
+ 5497 : tataataacyaagacaaaaaataacaaatgttggagaggatgtggagaaaagggaaccctca : 5558
+
+  187 : tgcactgttggtgggaatgcaaactggtgcagccactatggaaaacagtatggagatttctc :  248
+        | ||||| |||||||||||||||||||||||||||||||||||||||||||||||||| |||
+ 5559 : tacactgctggtgggaatgcaaactggtgcagccactatggaaaacagtatggagattcctc : 5620
+
+  249 : aaaaagttaaaaatagaaataccttatgacctagccatcccactactcggtatctatcctaa :  310
+        ||||| ||||||||||||||||| ||||||| ||| ||||||||||| ||||| ||||| ||
+ 5621 : aaaaaattaaaaatagaaataccatatgacccagctatcccactactgggtatttatccaaa : 5682
+
+  311 : gaacctgaagtcagcaattccaagagtcccacgcacccctatgttcattgcagcattatgta :  372
+        |||| |||| ||| |||||| ||||| |  | |||||||||||||||||||||||||||  |
+ 5683 : gaacttgaaatcaacaattcaaagagacttatgcacccctatgttcattgcagcattattca : 5744
+
+  373 : caatagccgagacatggaaccaacctaagtgcccagcaactgatgattggataaagaagata :  434
+        |||||||| |||||||||| ||||| ||||||||| |||||||||| |||||||||||||| 
+ 5745 : caatagccaagacatggaagcaacccaagtgcccatcaactgatgaatggataaagaagatg : 5806
+
+  435 : tggtatatatatacaatggaatactactcagccataa :  471
+        |||||||||||||||||||||||||||||||||||||
+ 5807 : tggtatatatatacaatggaatactactcagccataa : 5843
+
+vulgar: chr22_25082982_25083_6788_13907_3ltr 0 471 + L1-5_EC 5372 5843 + 1955 M 471 471
+
+C4 Alignment:
+------------
+         Query: chr7_79083048_790833_5343_19414_5ltr
+        Target: L1-5_EC L1	Equus caballus
+         Model: ungapped:dna2dna
+     Raw score: 1086
+   Query range: 2 -> 284
+  Target range: 5519 -> 5801
+
+    3 : acaaatgttggaggggttgtggagaaagaggaaccctcatacactgttggtgggaatgcaaa :   64
+        ||||||||||||| || ||||||||||  ||||||||||||||||| |||||||||||||||
+ 5520 : acaaatgttggagaggatgtggagaaaagggaaccctcatacactgctggtgggaatgcaaa : 5581
+
+   65 : ctggtacaaccactatggaaaacagtatggagatttctcaaaaagttaaaaatagaaatacc :  126
+        ||||| || |||||||||||||||||||||||||| |||||||| |||||||||||||||||
+ 5582 : ctggtgcagccactatggaaaacagtatggagattcctcaaaaaattaaaaatagaaatacc : 5643
+
+  127 : ctatgacccagccatcccattactgggtatctatcctaagaacctgatatcagaaatctcaa :  188
+         ||||||||||| |||||| |||||||||| ||||| |||||| ||| ||||  |||   ||
+ 5644 : atatgacccagctatcccactactgggtatttatccaaagaacttgaaatcaacaattcaaa : 5705
+
+  189 : gagtccgttgcacccctatgttcatcgcagcattatttacaatagccaagacgtggaaccag :  250
+        ||| |   ||||||||||||||||| ||||||||||| |||||||||||||| ||||| || 
+ 5706 : gagacttatgcacccctatgttcattgcagcattattcacaatagccaagacatggaagcaa : 5767
+
+  251 : cctacatgcccagaaactgatgattggataaaga :  284
+        || |  ||||||  ||||||||| ||||||||||
+ 5768 : cccaagtgcccatcaactgatgaatggataaaga : 5801
+
+vulgar: chr7_79083048_790833_5343_19414_5ltr 2 284 + L1-5_EC 5519 5801 + 1086 M 282 282
+-- completed exonerate analysis
