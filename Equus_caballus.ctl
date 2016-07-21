@@ -1,23 +1,22 @@
 # ------------------------------------------------------------------------------------------------------------------
-# Pipeline Control File Tamplate
+# Pipeline Control File Template
 # ------------------------------------------------------------------------------------------------------------------
 
 #------------------------------------------------------------------------------------------------------------------
-# Part 1. Basic setting
+# Part 1. Basic settings
 # ------------------------------------------------------------------------------------------------------------------
-# Host species reference genome sequences
-# The folder of host reference genome in which reference sequences can be found
-# Reference sequence should be the same as what you used for DIGS screening
+# Reference genome directory: path to a folder containing host reference genome in which reference sequences
+# Reference sequences should match those used for DIGS screening
 REFERENCE_GENOME_DIR = genome/Mammalia/
 
-# The format of any pipeline output summary file require a "project name" to begin with
+# Summary file: the pipeline produces a summary file requires a "project name":
 # Format: <project_name>.<output_name>.<file_type>
 PROJECT_NAME = 2016_10Equid
 
 # ------------------------------------------------------------------------------------------------------------------
 # Part 2. DIGS Screening result set table
 # ------------------------------------------------------------------------------------------------------------------
-# The DIGS screening resutlt set table
+# The DIGS screening result set table
 # The name of the file which the data are to be read from. Each row of the table appears as one line of the file.
 # If it does not contain an absolute path, the file name is relative to the current working directory
 # Default: first line should be header, separated by comma, no quote required, end with "\n" only
@@ -59,16 +58,16 @@ MAXTSD     = 20
 PPTLEN_MIN    = 10
 PPTLEN_MAX    = 30
 # Specify a file in multiple FASTA format to be used as a tRNA library that is aligned to the
-# area around the end of the 5Õ LTR to find a putative PBS. This file can be downloaded from GtRNAdb
+# area around the end of the 5Ã• LTR to find a putative PBS. This file can be downloaded from GtRNAdb
 TRNA_LIB      = REFLIB/equCab2-tRNAs.fa
-# Specify the minimum and maximum allowed distance between the start of the PBS and the 3Õ end
-# of the 5Õ LTR.
+# Specify the minimum and maximum allowed distance between the start of the PBS and the 3Ã• end
+# of the 5Ã• LTR.
 PBSOFFSET_MIN = 0
 PBSOFFSET_MAX = 100
 # Specify a list of pHMM files in HMMER2 format. The pHMMs must be defined for the amino
 # acid alphabet and follow the Plan7 specification. This file can be downloaded from pfam
 HMMS_PROFILE  = REFLIB/Pfam-Equine.hmm
-# Specify the area around the 5Õ LTR end to be searched for a PBS
+# Specify the area around the 5Ã• LTR end to be searched for a PBS
 PBSRADIUS     = 100
 
 # Specify a file in EMBL format to be used as the Repbase reference sequences that is used to
