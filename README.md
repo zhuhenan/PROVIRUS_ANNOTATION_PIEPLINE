@@ -22,6 +22,7 @@ To run this pipeline, some reference libraries are needed. As some of them are q
  - RepeatMasker library in **FASTA** format: http://www.girinst.org/server/RepBase/index.php
  - Pfam **hmm** profile : http://pfam.xfam.org
  - tRNA library : you can use your own library, or you can download one from [GtRNAdb](http://gtrnadb.ucsc.edu)
- - Host assembly or reference genome
+ - Host assembly or reference genome in **FASTA** format
  
-### 
+### Setting up control file
+After you meet all requirements, the only thing you need to do is to fillful the control file. 
