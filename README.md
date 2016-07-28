@@ -30,7 +30,7 @@ After you meet all requirements, the only thing you need to do is to fillful the
 
 ### Run
 It's very simply to run this pipeline, just follow the syntx:
-> perl ERVGenome_Pipeline_Part1.pl -f <you control file>
+> perl ERVGenome_Pipeline_Part1.pl -f \<you control file\>
 
 To see options:
 > perl ERVGenome_Pipeline_Part1.pl -h
