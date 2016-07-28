@@ -9,7 +9,7 @@ After downloading this repository, the following several external programmes are
 
 This pipeline requires:
  - PERL 5.8.3 or later
- - [NCBI BLAST\+](ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/)
+ - [NCBI BLAST+](ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/)
  - [Exonerate](https://www.ebi.ac.uk/about/vertebrate-genomics/software/exonerate)
  - [GenomeTools](http://genometools.org/)
  - [HMMER](http://hmmer.org/)
