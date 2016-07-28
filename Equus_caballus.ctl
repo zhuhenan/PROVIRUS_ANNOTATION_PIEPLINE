@@ -59,16 +59,16 @@ MAXTSD     = 20
 PPTLEN_MIN    = 10
 PPTLEN_MAX    = 30
 # Specify a file in multiple FASTA format to be used as a tRNA library that is aligned to the
-# area around the end of the 5Õ LTR to find a putative PBS. This file can be downloaded from GtRNAdb
+# area around the end of the 5Ã• LTR to find a putative PBS. This file can be downloaded from GtRNAdb
 TRNA_LIB      = REFLIB/equCab2-tRNAs.fa
-# Specify the minimum and maximum allowed distance between the start of the PBS and the 3Õ end
-# of the 5Õ LTR.
+# Specify the minimum and maximum allowed distance between the start of the PBS and the 3Ã• end
+# of the 5Ã• LTR.
 PBSOFFSET_MIN = 0
 PBSOFFSET_MAX = 100
 # Specify a list of pHMM files in HMMER2 format. The pHMMs must be defined for the amino
 # acid alphabet and follow the Plan7 specification. This file can be downloaded from pfam
 HMMS_PROFILE  = REFLIB/Pfam-Equine.hmm
-# Specify the area around the 5Õ LTR end to be searched for a PBS
+# Specify the area around the 5Ã• LTR end to be searched for a PBS
 PBSRADIUS     = 100
 
 # Specify a file in EMBL format to be used as the Repbase reference sequences that is used to
@@ -80,27 +80,27 @@ REPMASKER_LTR_LIBRARY_FILE = REFLIB/RepeatMaskerLib.fasta
 # Part 4. Mysql database connection parameter
 # ------------------------------------------------------------------------------------------------------------------
 # Username
-DATABASE_USER = zhuhenan
+# DATABASE_USER = #######
 # Password
-DATABASE_PWD  = 19890514
+# DATABASE_PWD  = #######
 # Specify the UCSC prepeat elements database
-DATABASE_UCSC = UCSC_RepeatMasker
+# DATABASE_UCSC = UCSC_RepeatMasker
 # Specify the DIGS screening database
-DATABASE_DIGS = HZ_LTR_2016_Twilight
+# DATABASE_DIGS = HZ_LTR_2016_Twilight
 # Specify the RpeatMasker premasked genome database
-DATABASE_RPEB = Repbase_premasker_genome
+# DATABASE_RPEB = Repbase_premasker_genome
 # Specify the host of database
-DATABASE_HOST = 127.0.0.1
+# DATABASE_HOST = ####.####.####.####
 # Specify the port of database
-DATABASE_PORT = 3306
+# DATABASE_PORT = ####
 # Open SSH tunnel
-SSH_TUNNEL    = YES
+# SSH_TUNNEL    = YES
 # Specify the ssh login user name
-SSH_USER      = zhuhenan
+# SSH_USER      = zhuhenan
 # Specify the ssh host IP
-SSH_HOST      = 130.209.233.61
+# SSH_HOST      = ###.###.###.###
 # Specify the listening port
-SSH_PORT      = 3003
+# SSH_PORT      = ####
 
 # ------------------------------------------------------------------------------------------------------------------
 # Part 5. Detect & filter LTRs according to DIGS results and UCSC RepeatMasker annotation
@@ -109,16 +109,16 @@ SSH_PORT      = 3003
 # This table is the same as the piepline part 1 final report, but has "TREEMARKER" column
 # "TREEMARKER" column shows every reocrd in the RT tree, only rows with "TREEMARKER" will be analysis
 # The table should be "csv" format
-#PROVIRUS_CSV = EquCab_2016FEB_ALL.step2_provirus_TreeMarker.csv
+# PROVIRUS_CSV = EquCab_2016FEB_ALL.step2_provirus_TreeMarker.csv
 
 # The pathway of folder which LTR sequneces are to be write into.
 # This folder will also work as the output folder for gluetools
 # If the folder doesn't exist, pipeline will create a new one
 # If the folder exists, pipeline will overwrite the old one
-GLUETOOLS_PROJECT = GLUETOOLS_PROJECTS
+# GLUETOOLS_PROJECT = GLUETOOLS_PROJECTS
 
 # An hash table which link DIGS probe name with Repbase label
-DIGS_TO_REPBASE = Repbase_premasked/Repbase.LTR.hash
+# DIGS_TO_REPBASE = Repbase_premasked/Repbase.LTR.hash
 
 # The pathway of folder which contains all GLUEtools XML files.
-#GLUETOOLS_XML = src/gluetools_xml
+# GLUETOOLS_XML = src/gluetools_xml
