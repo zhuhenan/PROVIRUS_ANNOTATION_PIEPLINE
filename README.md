@@ -23,7 +23,17 @@ To run this pipeline, some reference libraries are needed. As some of them are q
  - Pfam **hmm** profile : http://pfam.xfam.org
  - tRNA library : you can use your own library, or you can download one from [GtRNAdb](http://gtrnadb.ucsc.edu)
  - Host assembly or reference genome in **FASTA** format
+ - DIGS "Extracted" talbe in **CSV** format
  
 ### Setting up control file
-After you meet all requirements, the only thing you need to do is to fillful the control file. 
+After you meet all requirements, the only thing you need to do is to fillful the control file. This [control file templete provides](https://github.com/zhuhenan/PROVIRUS_ANNOTATION_PIEPLINE/blob/master/Equus_caballus.ctl) setting details.
 
+### Run
+It's very simply to run this pipeline, just follow the syntx:
+> perl ERVGenome_Pipeline_Part1.pl -f <you control file>
+
+To see options:
+> perl ERVGenome_Pipeline_Part1.pl -h
+
+## Authors
+Zhu, Henan (h.zhu.1@research.gla.ac.uk)
