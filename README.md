@@ -23,13 +23,6 @@ To run this pipeline, some reference libraries are needed. As some of them are q
  - Pfam **hmm** profile : http://pfam.xfam.org
  - tRNA library : you can use your own library, or you can download one from [GtRNAdb](http://gtrnadb.ucsc.edu)
  - Host assembly or reference genome in **FASTA** format
-<<<<<<< HEAD
- - DIGS "Extracted" talbe in tab-delimited **CSV** format, you can also use this [templete](https://github.com/zhuhenan/PROVIRUS_ANNOTATION_PIEPLINE/blob/master/DIGS_table_templete.csv) to generate your own table																								
-  1. Record_ID	 BLAST_ID can be any number																									
-  2. <Organism>/<Data_type>/<Version>/<Target_name> is the path to the host genome assembly																									
-  3. Assigned_name and Assigned_gene can be the same																									
-  4. Orientation can be either +ve for positive or -ve for negative																										
-=======
  - DIGS "Extracted" talbe in tab-delimited **CSV** format, you can also use this [templete](https://github.com/zhuhenan/PROVIRUS_ANNOTATION_PIEPLINE/blob/master/DIGS_table_templete.csv) to generate your own table
  - if you want to custom your own table, please follow these rules
   1. Record_ID, BLAST_ID can be any number
@@ -37,8 +30,6 @@ To run this pipeline, some reference libraries are needed. As some of them are q
   3. Assigned_name and Assigned_gene can be the same
   4. Orientation can be either +ve for positive or -ve for negative
 
->>>>>>> readme
- 
 ### Setting up control file
 After you meet all requirements, the only thing you need to do is to fillful the control file. This [control file templete](https://github.com/zhuhenan/PROVIRUS_ANNOTATION_PIEPLINE/blob/master/Equus_caballus.ctl)  provides setting details.
 
