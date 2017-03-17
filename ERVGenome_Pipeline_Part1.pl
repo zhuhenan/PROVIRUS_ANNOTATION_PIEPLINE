@@ -37,10 +37,10 @@ use Analysis;
 # ------------------------------------------------------------------------------------------------------------------
 
 # Initialization - read files
-my ($ctl, $tools, $analysis, $embl) = &initialisation();
+my ($ctl, $tools, $analysis) = &initialisation();
 
 # Step 1 : read the DIGS screening result set & extract RT and (RT + flanking region) sequences
-#$analysis->step1_read_DIGS_result($tools, $ctl);
+$analysis->step1_read_DIGS_result($tools, $ctl);
 
 # Step 2 : use LTR_Harvest & LTR_Digest to detect proviral gene
 #$analysis->step2_gt_ltrharvest_ltrdigest($tools, $ctl);
@@ -64,33 +64,23 @@ sub initialisation {
 	);
 	
     # Call help screen or do the analysis 
-    if (defined $opt_h || !defined($ctlFile)) {
-	    &do_help;
-    }
+    if (defined $opt_h || !defined($ctlFile)) { &do_help; }
 	
 	# Initiate toolboxs and analysis progress
     $tools    = Toolboxs->new();
     $analysis = Analysis->new();
 
-
-	
 	# Read the control file
 	$ctl = $tools->ctl_reader($ctlFile);
 	# System test
 	$tools->test_system($ctl);
 	
-	# Read & store the Repbase reference sequence library
-    $tools->embl_reader($ctl);
-	$tools->create_Repbase_LTR_fasta_lib($ctl);
+	# Make blast database based on the Repbase library
+	my $fasta = $ctl->get_one_tag("REPMASKER_LTR_LIBRARY_FILE");
+	system "makeblastdb -dbtype nucl -in ".$fasta." -out ".$fasta." -input_type fasta -parse_seqids -hash_index";
 	
-#	# Make blast database based on the Repbase library
-#	my $fasta = $ctl->get_one_tag("REPMASKER_LTR_LIBRARY_FILE");
-#	system "makeblastdb -dbtype nucl -in ".$fasta." -out ".$fasta." -input_type fasta -parse_seqids -hash_index";
-#	# Call help screen out and exit or continue
-#    &do_help if (defined $opt_h);
-#	
-#	# Return address
-#	return ($ctl, $tools, $analysis, $embl);
+	# Return address
+	return ($ctl, $tools, $analysis);
 }
 
 # ------------------------------------------------------------------------------------------------------------------

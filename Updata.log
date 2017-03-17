@@ -3,3 +3,6 @@ V1.0
 
 V2.0
 1. using pipeline without parameters will trigger help message, instead of error message
+2. discard reference library storage function
+3. change DIGSs results reading method, use hash list instead of array for each row
+4. Orientation in DIGs table is readable now, discard associated convert function

@@ -4,10 +4,7 @@ package Analysis;
 # History
 # -------
 # Henan Zhu     11/02/2016     create it - Version 1
-# Henan Zhu     17/02/2016     1. add new functions: now it can blast LTRs again the Repbase reference
-#                              2. delete multiple LTR ceck function & merge it into the main function
-#                              - Version 2
- 
+
 use strict;
 use warnings;
 use Exporter qw(import);
@@ -38,121 +35,124 @@ sub new {
     return bless $self, $class;
 }
 
-## ------------------------------------------------------------------------------------------------------------------
-## Sub functions
-## Processing data step 1 - read the DIGS screening result set
-## 1. make a output folder for raw sequences
-## 2. read the DIGS result set
-## 3. for each result, extract RT and (RT + flanking region), and then store it in one individual file
-## 4. for each result, store any asscoiated information into step1_summary.csv
-## 5. return step1_summary.csv
-## ------------------------------------------------------------------------------------------------------------------
-#sub step1_read_DIGS_result {
-#	
-#	# Check current working space & make output folder
-#	my $cwd = &cwd();
-#	
-#	# Initialization
-#	my ($self, $tools, $ctl) = @_;
-#	my $DIGS       = $ctl->get_one_tag("DIGS_RESULT_SET_CSV");
-#	my $project    = $ctl->get_one_tag("PROJECT_NAME");
-#	my $output_dir = $ctl->get_one_tag("RAW_SEQ_OUT_DIR");
-#	
-#	# If the folder exists, pipeline will overwrite the old one 
-#	# create a new one
-#	&build_folder("$cwd/$output_dir");
-#	$tools->signal_step_message(1);
-#	
-#	# Skip header line of DIGS csv & print header line of RT summary
-#	$tools->signal_step_message(2);
-#	
-#	## Process DIGS result set
-#	my $csv = Text::CSV_XS->new ({ binary => 1, auto_diag => 1 });
-#	# Open the DIGS result set & process record
-#	open(my $input, "<", $DIGS) or die $tools->signal_step_message(10);
-#	open(my $output, ">", "$cwd/$project.step1_RT_summary.csv");
-#	
-#	# Make new csv output file header
-#	my @header = ("HOST","CHR","RT_START","RT_END","5-FLANKING","3-FLANKING","STRAND","ASSIGNED_GENE","BIT_SCORE","IDENTITY","RT_FILE","FLANKING_FILE");
-#	push(my @rows, \@header);
-#	
-#	# Retrieve the first line as the column names
-#	$csv->header($input);
-#	# Retrieve all other line and process in turn
-#	while (my $row = $csv->getline($input)) {
-#        push(@rows, step1_process_extract_seq($ctl, $row));
-#    }
-#    
-#	# Store step 1 summary file into ctl class
-#	# Print step 1 summary
-#	$ctl->add_parameters("step1_summary", "$cwd/$project.step1_RT_summary.csv");
-#	$csv->say($output, $_) for @rows;
-#}
-#
-## ------------------------------------------------------------------------------------------------------------------
-## Sub functions
-## Processing data step 1 - extract RT and (RT + flanking region) sequences
-## DIGS result set csv format:
-##     [2]  Organism    [5]  Target_name     [7]  Scaffold      [8]  Extract_start    [9]  Extract_end
-##     [11] Sequence    [12] Assigned_name   [14] Orientation   [15] Bit_score        [16] Identity 
-## Output fasta file name format :
-##     {chr}_{start}_{end}_{host}_{RT|genome}.fna
-## Output fasta file header format :
-##    >{chr}_{start}_{end}_{RT|genome}
-## Return csv line format  :
-##     {HOST},{CHR},{RT_START},{RT_END},{5-FLANKING},{3-FLANKING},{STRAND},
-##     {ASSIGNED_GENE},{BIT_SCORE},{IDENTITY},{RT_FILE},{FLANKING_FILE}
-## ------------------------------------------------------------------------------------------------------------------
-#sub step1_process_extract_seq {
-#	
-#	# Initialization
-#	my ($ctl, $row) = @_;
-#	my ($fh, $output_RT, $output_flanking, $header);
-#	my $output_dir = $ctl->get_one_tag("RAW_SEQ_OUT_DIR");
-#	
-#	my @return_row = ();
-#	# Split line into samll elements & calculate flanking region
-#	# Store RT info into return line
-#	push(@return_row, ($row->[2],$row->[7],$row->[8],$row->[9]));
-#	# Calculate flanking region & store info into return line
-#	# 10,000 5' ~ 3' 10,000
-#	if ($row->[8] - 10000 < 0) {
-#		push(@return_row, (0,($row->[9]+10000)));
-#	} else {
-#		push(@return_row, (($row->[8]-10000),($row->[9]+10000)));
-#	}
-#	# Excahnge +/-ve to readable word
-#	if ($row->[14] =~ /-ve/) { push(@return_row, "negative"); }
-#    else { push(@return_row, "positive"); }
-#	# Add assigned gene information into return line
-#	push(@return_row, ($row->[12],$row->[15],$row->[16]));
-#	# Extract RT sequence - format the file and header
-#	$output_RT    = "$row->[2]_$row->[7]_$row->[8]_$row->[9]_RT.fna";
-#	$header       = ">$row->[2]_$row->[7]_$row->[8]_$row->[9]_RT";
-#	push(@return_row, $output_RT);
-#	# Extract RT sequence - print sequence
-#	open($fh, ">", "$output_dir/$output_RT");
-#	print $fh "$header\n$row->[11]\n";
-#	# Extract flanking region sequence - format the file and header
-#	$output_flanking = "$row->[2]_$row->[7]_$row->[8]_$row->[9]_genome.fna";
-#	$header          = ">$row->[2]_$row->[7]_$row->[8]_$row->[9]_genome";
-#	push(@return_row, $output_flanking);
-#	# Extract flanking region sequence - print sequence
-#	open($fh, ">", "$output_dir/$output_flanking");
-#	print $fh "$header\n";
-#	my $start = 0;
-#	if ($row->[8] - 10000 > 0) { $start = $row->[8] - 10000; }
-#	my $end   = $row->[9] + 10000;
-#	my $scaf  = $ctl->get_one_tag("REFERENCE_GENOME_DIR")."/$row->[2]/$row->[3]/$row->[4]/$row->[5]";
-#	
-#	print "samtools faidx $scaf $row->[7]:$start-$end\n";
-#	@_ = split("\n", `samtools faidx $scaf $row->[7]:$start-$end\n`);
-#	foreach (@_) { print $fh $_ if $_ !~ />/}
-#
-#	# Return all summary line
-#	return \@return_row;
-#}
-#
+# ------------------------------------------------------------------------------------------------------------------
+# Sub functions
+# Processing data step 1 - read the DIGS screening result set
+# 1. make a output folder for raw sequences
+# 2. read the DIGS result set
+# 3. for each result, extract RT and (RT + flanking region), and then store it in one individual file
+# 4. for each result, store any asscoiated information into step1_summary.csv
+# 5. return step1_summary.csv
+# ------------------------------------------------------------------------------------------------------------------
+sub step1_read_DIGS_result {
+	
+	# Check current working space & make output folder
+	my $cwd = &cwd();
+	
+	# Initialization
+	my ($self, $tools, $ctl) = @_;
+	my $DIGS       = $ctl->get_one_tag("DIGS_RESULT_SET_CSV");
+	my $project    = $ctl->get_one_tag("PROJECT_NAME");
+	my $output_dir = $ctl->get_one_tag("RAW_SEQ_OUT_DIR");
+	
+	# If the folder exists, pipeline will overwrite the old one 
+	# create a new one
+	$tools->signal_step_message(1);
+	&build_folder("$cwd/$output_dir");
+	$tools->signal_step_message(2);
+	
+	# Process DIGS result set
+	my $csv = Text::CSV_XS->new ({ binary => 1, auto_diag => 1 });
+	# Open the DIGS result set & process record
+	open(my $input, "<", $DIGS) or die $tools->signal_step_message(10);
+	open(my $output, ">", "$cwd/$project.step1_RT_summary.csv");
+	
+	# Make new csv output file header
+	my @header = ("HOST","CHR","RT_START","RT_END","5-FLANKING","3-FLANKING","STRAND","ASSIGNED_GENE","BIT_SCORE","IDENTITY","RT_FILE","FLANKING_FILE");
+	push(my @rows, \@header);
+	
+	# Retrieve the first line as the column names
+	$csv->header($input);
+	# Retrieve all other line and process in turn
+	while (my $row = $csv->getline_hr($input)) {
+        push(@rows, step1_process_extract_seq($ctl, $row));
+    }
+    
+	#Store step 1 summary file into ctl class
+	#Print step 1 summary
+	$ctl->add_parameters("step1_summary", "$cwd/$project.step1_RT_summary.csv");
+	$csv->say($output, $_) for @rows;
+}
+
+# ------------------------------------------------------------------------------------------------------------------
+# Sub functions
+# Processing data step 1 - extract RT and (RT + flanking region) sequences
+# DIGS result set - column use in the following analysis
+#     organism     target_name     scaffold       extract_start     extract_end
+#     sequence     assigned_name   orientation    bitscore          identity 
+# Output fasta file name format :
+#     {chr}_{start}_{end}_{host}_{RT|genome}.fna
+# Output fasta file header format :
+#    >{chr}_{start}_{end}_{RT|genome}
+# Return csv line format  :
+#     {HOST},{CHR},{RT_START},{RT_END},{5-FLANKING},{3-FLANKING},{STRAND},
+#     {ASSIGNED_GENE},{BIT_SCORE},{IDENTITY},{RT_FILE},{FLANKING_FILE}
+# ------------------------------------------------------------------------------------------------------------------
+sub step1_process_extract_seq {
+	
+	# Initialization
+	my ($ctl, $row) = @_;
+	my ($fh, $output_RT, $output_flanking, $header);
+	my $output_dir = $ctl->get_one_tag("RAW_SEQ_OUT_DIR");
+	
+	my @return_row = ();
+	# Split line into samll elements & calculate flanking region
+	# Store RT info into return line: organism, scaffold, RT_start, RT_end
+	push(@return_row, ($row->{organism},$row->{scaffold},$row->{extract_start},$row->{extract_end}));
+	
+	# Calculate flanking region & store info into return line
+	# 10,000 5' ~ 3' 10,000
+	if ($row->{extract_start} - 10000 < 0) {
+		push(@return_row, (0,($row->{extract_end}+10000)));
+	} else {
+		push(@return_row, (($row->{extract_start}-10000),($row->{extract_end}+10000)));
+	}
+	
+	# Add orientation information
+	push(@return_row, $row->{orientation});
+
+	# Add assigned gene blast quality into return line
+	push(@return_row, ($row->{assigned_name},$row->{bitscore},$row->{identity}));
+
+	# Extract RT sequence - format the file and header
+	$output_RT       =     $row->{organism}."_".$row->{scaffold}."_".$row->{extract_start}."_".$row->{extract_end}."_RT.fna";
+	$header          = ">".$row->{organism}."_".$row->{scaffold}."_".$row->{extract_start}."_".$row->{extract_end}."_RT";
+    push(@return_row, $output_RT);
+	# Extract RT sequence - print sequence
+	open($fh, ">", "$output_dir/$output_RT");
+	print $fh "$header\n$row->{sequence}\n";
+	
+	# Extract flanking region sequence - format the file and header
+	$output_flanking =     $row->{organism}."_".$row->{scaffold}."_".$row->{extract_start}."_".$row->{extract_end}."_genome.fna";
+	$header          = ">".$row->{organism}."_".$row->{scaffold}."_".$row->{extract_start}."_".$row->{extract_end}."_genome";
+	push(@return_row, $output_flanking);	
+	# Extract flanking region sequence - print sequence
+	open($fh, ">", "$output_dir/$output_flanking");
+	
+	print $fh "$header\n";
+	my $start = 0;
+	if ($row->{extract_start} - 10000 > 0) { $start = $row->{extract_start} - 10000; }
+	my $end  = $row->{extract_end} + 10000;
+	my $scaf = $ctl->get_one_tag("REFERENCE_GENOME_DIR")."/$row->{organism}/$row->{target_datatype}/$row->{target_version}/$row->{target_name}";
+	
+	print "samtools faidx $scaf $row->{scaffold}:$start-$end\n";
+	@_ = split("\n", `samtools faidx $scaf $row->{scaffold}:$start-$end\n`);
+	foreach (@_) { print $fh $_ if $_ !~ />/}
+
+	# Return all summary line
+	return \@return_row;
+}
+
 ## ------------------------------------------------------------------------------------------------------------------
 ## Sub functions
 ## Processing data step 2 - LTR_Harvest & LTR_Digest
@@ -627,21 +627,21 @@ sub new {
 #}
 #
 #
-## ------------------------------------------------------------------------------------------------------------------
-## Sub functions
-## Overwrite or make a folder at the given location, if folder does or doesn't exists
-## ------------------------------------------------------------------------------------------------------------------
-#sub build_folder {
-#	
-#	#Initialization
-#	my $path = shift;
-#	
-#	# If the folder exists, pipeline will overwrite the old one
-#	if (-d $path) { system "rm -rf $path"};
-#	# create a new one
-#	system "mkdir $path";
-#}
-#
+# ------------------------------------------------------------------------------------------------------------------
+# Sub functions
+# Overwrite or make a folder at the given location, if folder does or doesn't exists
+# ------------------------------------------------------------------------------------------------------------------
+sub build_folder {
+	
+	#Initialization
+	my $path = shift;
+	
+	# If the folder exists, pipeline will overwrite the old one
+	if (-d $path) { system "rm -rf $path"};
+	# create a new one
+	system "mkdir $path";
+}
+
 ## ------------------------------------------------------------------------------------------------------------------
 ## Sub functions
 ## The basic function, shown below, for reverse complementing a DNA sequence
