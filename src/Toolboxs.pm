@@ -67,7 +67,7 @@ sub test_genometools      { return `which gt`          ; }
 sub test_exonerate        { return `which exonerate`   ; }
 sub test_ncbi_makeblastdb { return `which makeblastdb` ; }
 sub test_ncbi_tblastn     { return `which tblastn`     ; }
-
+#
 # ------------------------------------------------------------------------------------------------------------------
 # Sub functions
 # Signal System - system test signal & working stage single & error message

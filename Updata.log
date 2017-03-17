@@ -1,0 +1,5 @@
+V1.0
+1. basic function
+
+V2.0
+1. using pipeline without parameters will trigger help message, instead of error message
