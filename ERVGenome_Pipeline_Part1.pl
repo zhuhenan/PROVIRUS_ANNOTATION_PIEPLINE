@@ -43,15 +43,15 @@ my ($ctl, $tools, $analysis) = &initialisation();
 $analysis->step1_read_DIGS_result($tools, $ctl);
 
 # Step 2 : use LTR_Harvest & LTR_Digest to detect proviral gene
-#$analysis->step2_gt_ltrharvest_ltrdigest($tools, $ctl);
+$analysis->step2_gt_ltrharvest_ltrdigest($tools, $ctl);
 
 #
 &quit(0);
  
-## ------------------------------------------------------------------------------------------------------------------
-## Sub functions
-## Initialization - test system & catch the command line input & set output file parameters 
-## ------------------------------------------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------------------------------------------
+# Sub functions
+# Initialization - test system & catch the command line input & set output file parameters 
+# ------------------------------------------------------------------------------------------------------------------
 sub initialisation {
 	
 	# Initialization
